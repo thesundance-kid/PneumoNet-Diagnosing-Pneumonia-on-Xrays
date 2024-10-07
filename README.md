@@ -6,23 +6,23 @@ This project applies transfer learning with the VGG16 model to diagnose pneumoni
 # Dataset
 The dataset used is from the National Institutes of Health (NIH), available on Kaggle: Chest X-ray Dataset. The dataset contains thousands of X-ray images that are labeled for different conditions, including pneumonia. For this project, the X-rays are categorized as:
 
-Normal: Healthy lung X-rays.
-Bacterial Pneumonia: X-rays showing bacterial infection.
-Viral Pneumonia: X-rays showing viral infection.
+Normal: Healthy lung X-rays.  
+Bacterial Pneumonia: X-rays showing bacterial infection.  
+Viral Pneumonia: X-rays showing viral infection.  
 
-You can find the dataset at this link: https://www.kaggle.com/datasets/nih-chest-xrays/data
-The xrays are originally separated only into two folders for normal vs pneumonia. But the xrays in the pneumonia folder are titled as bacterial or viral, so I separated them into two separate folders: bacterial pneumonia and viral pneumonia first before training. 
+You can find the dataset at this link: https://www.kaggle.com/datasets/nih-chest-xrays/data  
+The xrays are originally separated only into two folders for normal vs pneumonia. But the xrays in the pneumonia   folder are titled as bacterial or viral, so I separated them into two separate folders: bacterial pneumonia and viral   pneumonia first before training. 
 
 # Project Summary
 This project consists of two Jupyter notebooks demonstrating two different approaches for training the model:
 
-Without Data Augmentation: The first notebook represents a baseline model where no data augmentation techniques were applied, achieving 70% accuracy.
-With Data Augmentation: The second notebook applies data augmentation techniques (such as rotation, shifting, and zooming) to increase the diversity of training images, which improved the model accuracy to 80%.
+Without Data Augmentation: The first notebook represents a baseline model where no data augmentation techniques were applied, achieving 70% accuracy.  
+With Data Augmentation: The second notebook applies data augmentation techniques (such as rotation, shifting, and zooming) to increase the diversity of training images, which improved the model accuracy to 80%.  
 Both notebooks follow a transfer learning approach using the VGG16 model pre-trained on ImageNet. They freeze the convolutional layers, and train only the classifier layers at the end. 
 
 # Notebooks
-1. Xray_VGG16.ipynb (Without Data Augmentation)
-Objective: First attempt at training the VGG16 model using the unmodified dataset.
+1. Xray_VGG16.ipynb (Without Data Augmentation)  
+Objective: First attempt at training the VGG16 model using the unmodified dataset.  
 Accuracy: Reached 70% accuracy.
 Key Steps:
 Loading the pre-trained VGG16 model.
