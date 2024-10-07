@@ -21,32 +21,32 @@ With Data Augmentation: The second notebook applies data augmentation techniques
 Both notebooks follow a transfer learning approach using the VGG16 model pre-trained on ImageNet. They freeze the convolutional layers, and train only the classifier layers at the end. 
 
 # Notebooks
-1. Xray_VGG16.ipynb (Without Data Augmentation)  
+1. Xray_VGG16.ipynb (Without Data Augmentation)    
 Objective: First attempt at training the VGG16 model using the unmodified dataset.  
-Accuracy: Reached 70% accuracy.
-Key Steps:
-Loading the pre-trained VGG16 model.
-Fine-tuning the top layers to fit the pneumonia diagnosis task.
-Training on the dataset without applying any data augmentation techniques.
+Accuracy: Reached 70% accuracy.  
+Key Steps:  
+Loading the pre-trained VGG16 model.  
+Fine-tuning the top layers to fit the pneumonia diagnosis task.  
+Training on the dataset without applying any data augmentation techniques.  
 
-2. Xray_VGG16_w_augmentation.ipynb (With Data Augmentation)
-Objective: Second attempt using data augmentation to artificially expand the dataset and improve model robustness.
-Accuracy: Achieved 80% accuracy.
-Key Steps:
+2. Xray_VGG16_w_augmentation.ipynb (With Data Augmentation)  
+Objective: Second attempt using data augmentation to artificially expand the dataset and improve model robustness.  
+Accuracy: Achieved 80% accuracy.  
+Key Steps:  
 Same approach as the first notebook, but included various data augmentation techniques such as: Slight Rotation, Width and height shifting, Zooming, Rescaling.
 
 These techniques helped the model generalize better, leading to higher accuracy. I myself was surprised that data augmentation helped in this case as chest xrays are such standardized images. For example, one augmentation technique I did not use was horizontal rotation as this would compromise a basic practice of xrays always showing the patients right side on the left side of the scan. 
 
-Model Architecture
-Base Model: VGG16 pre-trained on ImageNet.
-Modifications: The top layers were replaced to adapt to the pneumonia classification task (3 output categories: Normal, Bacterial Pneumonia, and Viral Pneumonia).
-Loss Function: Categorical cross-entropy.
-Optimizer: Adam (with a learning rate of 0.001).
+Model Architecture  
+Base Model: VGG16 pre-trained on ImageNet.  
+Modifications: The top layers were replaced to adapt to the pneumonia classification task (3 output categories: Normal, Bacterial Pneumonia, and Viral Pneumonia).    
+Loss Function: Categorical cross-entropy.  
+Optimizer: Adam (with a learning rate of 0.001).  
 Metrics: Accuracy.
 
 # Results
-Without Data Augmentation: The model achieved 70% accuracy.
-With Data Augmentation: Data augmentation improved the model accuracy to 80%.
+Without Data Augmentation: The model achieved 70% accuracy.  
+With Data Augmentation: Data augmentation improved the model accuracy to 80%.  
 
 I was quite happy with the accuracy after data augmentation. Although detecting pneumonia in a chest x ray is relatively simple for a physician, determining from an xray alone whether a penumonia was bacterial or viral in nature is much more challenging. Often additional workup is necessary. 
 
@@ -58,7 +58,7 @@ Notably, the 2018 paper by Kermany et al. titled Identifying Medical Diagnoses a
 # Future Work
 Here are some potential directions I am considering to explore in the future:
 
-Other Architectures: Experiment with other architectures like ResNet or Inception. Or unfreeze more layers of the VGG16 model (though I am unfortunately running low on free google colab compute).
-Hyperparameter Tuning: Further optimize learning rates, batch sizes, and other hyperparameters.
-Larger Dataset: Testing the model on larger or more diverse datasets could help improve generalization.
+Other Architectures: Experiment with other architectures like ResNet or Inception. Or unfreeze more layers of the VGG16 model (though I am unfortunately running low on free google colab compute).  
+Hyperparameter Tuning: Further optimize learning rates, batch sizes, and other hyperparameters.  
+Larger Dataset: Testing the model on larger or more diverse datasets could help improve generalization.  
 Model Interpretability: Apply techniques like Grad-CAM to visualize the areas of X-rays the model focuses on for its predictions.
