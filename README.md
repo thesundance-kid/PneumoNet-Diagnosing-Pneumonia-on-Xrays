@@ -23,10 +23,9 @@ The xrays are originally separated only into two folders for normal vs pneumonia
 
 notebooks: contains notebooks for training and testing the Inception V3 model. For reference, I also used VGG16 for transfer learning and the notebooks for its training and testing is included as well. It approached similar accuracy.  
 
-models: model weights  
-
 README.md: project documentation
 
+the model weights used in the Testing_InceptionV3.ipynb notebook can be downloaded at this link: https://drive.google.com/uc?export=download&id=1XYHWTAKaZwy7jTf5tIbZece6NtoCPpfk  
 
 ## Results  
 
