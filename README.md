@@ -1,6 +1,6 @@
 # PneumoNet: Deep Learning for Pediatric Pneumonia Detection  
 
-<img src="https://raw.githubusercontent.com/huggingface/setfit/main/assets/setfit.png">
+<img src="https://i.imgur.com/jZqpV51.png">
 
 ## Project Overview  
 This repository demonstrates the application of deep learning for automated detection and classification of pneumonia from pediatric chest X-rays, utilizing transfer learning with the InceptionV3 architecture. It was trained to do three way classification of pediatric patients' chest X-rays as Normal, Bacterial Pneumonia, or Viral Pneumonia. 
