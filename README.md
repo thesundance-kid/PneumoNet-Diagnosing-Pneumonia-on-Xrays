@@ -12,14 +12,20 @@ Pneumonia is a leading cause of childhood mortality worldwide. This project show
     - Demonstrate AI's potential in pediatric medical imaging  
 
 ## Dataset
-The dataset used is from the National Institutes of Health (NIH), available on Kaggle: Chest X-ray Dataset. The dataset contains over 5000 X-ray images that are labeled for different conditions, including pneumonia. For this project, the X-rays are categorized as:
+The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
 
-Normal: Healthy lung X-rays.  
-Bacterial Pneumonia: X-rays showing bacterial infection.  
-Viral Pneumonia: X-rays showing viral infection.  
+Chest X-ray images (anterior-posterior) were selected from retrospective cohorts of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. All chest X-ray imaging was performed as part of patients’ routine clinical care.
 
-You can find the dataset at this link: https://www.kaggle.com/datasets/nih-chest-xrays/data  
-The xrays are originally separated only into two folders for normal vs pneumonia. But the xrays in the pneumonia folder are titled as bacterial or viral. I separated them into two separate folders: bacterial pneumonia and viral pneumonia before training.  
+For the analysis of chest x-ray images, all chest radiographs were initially screened for quality control by removing all low quality or unreadable scans. The diagnoses for the images were then graded by two expert physicians before being cleared for training the AI system. In order to account for any grading errors, the evaluation set was also checked by a third expert.
+
+You can find the dataset at this link: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+
+Acknowledgements
+Data: https://data.mendeley.com/datasets/rscbjbr9sj/2
+
+License: CC BY 4.0
+
+Citation: http://www.cell.com/cell/fulltext/S0092-8674(18)30154-5
 
 ## Repository Structure  
 
